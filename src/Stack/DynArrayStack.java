@@ -1,3 +1,5 @@
+package Stack;
+
 public class DynArrayStack {
     private int top;
     private int capacity;

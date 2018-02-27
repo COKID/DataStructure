@@ -1,3 +1,5 @@
+package Stack;
+
 public class ArrayStack {
     private int top;
     private int capacity;
