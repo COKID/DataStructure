@@ -20,7 +20,7 @@ public class ArrayQueue {
         return (front==-1);
     }
     public boolean isFull(){
-        return ((capacity+1)%capacity==front);
+        return ((rear+1)%capacity==front);
     }
     public int getQueueSize(){
         return ((capacity-front+rear+1)%capacity);
