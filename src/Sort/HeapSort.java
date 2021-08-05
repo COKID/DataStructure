@@ -1,12 +1,15 @@
 package Sort;
 
 public class HeapSort {
-    public static void sort(int[] array,int n) {
+    public static void sort(int[] array,int n) {//数组0号位不用,n为除0号位的元素数量。
         for(int i=n/2; i>=1; i--){
             heapAdjust(array,i,n);//从最后一个有子节点的节点开始依次往前调整对应节点来生成大顶堆
         }
+//        for (int value : array) {
+//            System.out.println(value);
+//        }
         for(int i=1; i<n; i++){
-            swap(array,1,n-i-1);//交换堆顶元素与未排序堆最后一个元素
+            swap(array,1,n-i+1);//交换堆顶元素与未排序堆最后一个元素
             heapAdjust(array,1,n-i);//根据调整节点重新生成大顶堆
         }
     }
@@ -28,7 +31,7 @@ public class HeapSort {
         if(low<high){
             int temp=array[low];
             array[low]=array[high];
-            array[high]=array[low];
+            array[high]=temp;
         }
     }
 }

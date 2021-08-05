@@ -23,7 +23,7 @@ public class QuickSort {
         if(low<high){
             int temp=array[low];
             array[low]=array[high];
-            array[high]=array[low];
+            array[high]=temp;
         }
     }
 }
