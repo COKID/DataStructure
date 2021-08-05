@@ -5,9 +5,6 @@ public class HeapSort {
         for(int i=n/2; i>=1; i--){
             heapAdjust(array,i,n);//从最后一个有子节点的节点开始依次往前调整对应节点来生成大顶堆
         }
-//        for (int value : array) {
-//            System.out.println(value);
-//        }
         for(int i=1; i<n; i++){
             swap(array,1,n-i+1);//交换堆顶元素与未排序堆最后一个元素
             heapAdjust(array,1,n-i);//根据调整节点重新生成大顶堆
